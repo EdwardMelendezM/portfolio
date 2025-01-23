@@ -1,6 +1,8 @@
 import { Experience } from "@/components/experence-card";
 import { Project } from "@/components/projects";
 
+export const mePhoto = "/porftolio/projects/me.png";
+
 export const projects: Project[] = [
     {
         title: "SmartOne",
@@ -71,7 +73,7 @@ export const projects: Project[] = [
     },
     {
         title: "Messenger Clone",
-        image: "/projects/proy-messenger.jpg",
+        image: "/portfolio/projects/proy-messenger.jpg",
         url: "https://messenger-clone-next-js-13-fdf5nsnqb-edwardmelendezm.vercel.app/",
         technologies: ["Pusher", "Next JS", "Tailwind CSS", "React JS", "Vercel", "MongoDB"],
         descriptions: [
