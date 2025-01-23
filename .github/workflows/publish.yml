@@ -22,7 +22,7 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
 
-      - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
+      - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧 onichan
         uses: ./.github/workflows/setup-node
 
       - name: Setup Pages ⚙️
