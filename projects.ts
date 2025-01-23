@@ -1,10 +1,10 @@
-import {Experience} from "@/components/experence-card";
-import {Project} from "@/components/projects";
+import { Experience } from "@/components/experence-card";
+import { Project } from "@/components/projects";
 
 export const projects: Project[] = [
     {
         title: "SmartOne",
-        image: "/projects/proy-odin.PNG",
+        image: "/portfolio/projects/proy-odin.PNG",
         url: "https://odin.onscp.com/auth/login",
         technologies: ["Angular 17", "Go", "Microservicios", "Clean Architecture", "Docker", "Kubernetes", "Gitlab CI/cicd", "AWS", "Multi tenants"],
         descriptions: [
@@ -16,7 +16,7 @@ export const projects: Project[] = [
     },
     {
         title: "Airbnb Clone",
-        image: "/projects/proy-airbnb.PNG",
+        image: "/portfolio/projects/proy-airbnb.PNG",
         url: "https://clone-airbnb-proyect-3x0alluux-edwardmelendezm.vercel.app/",
         technologies: ["Next JS", "Tailwind CSS", "React JS", "Prisma DB", "Planetscale", "Vercel"],
         descriptions: [
@@ -27,7 +27,7 @@ export const projects: Project[] = [
     },
     {
         title: "Casa Miau",
-        image: "/projects/proy-casa-miau.JPG",
+        image: "/portfolio/projects/proy-casa-miau.JPG",
         url: "https://github.com/EdwardMelendezM/CasaMiau",
         technologies: ["Php", "MVC", "Mysql", "Bootstrap", "Javascript"],
         descriptions: [
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     },
     {
         title: "Gestor de silabos C.I.",
-        image: "/projects/proy-centro-computo.JPG",
+        image: "/portfolio/projects/proy-centro-computo.JPG",
         url: "https://github.com/EdwardMelendezM/SISTEMA-DE-GESTION-DE-SILABOS-Y-CONTROL-DE-ASISTENCIA-PARA-EL-DEPARTAMENTO-ACADEMICO-DE-ING.-INFORMA",
         technologies: ["Php", "MVC", "Mysql", "Bootstrap", "Javascript", "Reportes PDF"],
         descriptions: [
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     },
     {
         title: "Ecommerce CMS",
-        image: "/projects/proy-ecommerce.jpg",
+        image: "/portfolio/projects/proy-ecommerce.jpg",
         url: "https://ecommerce-admin-pi-eight.vercel.app/sign-in?redirect_url=https%3A%2F%2Fecommerce-admin-pi-eight.vercel.app%2F",
         technologies: ["CMS", "Next JS", "Tailwind", "React JS", "Prisma DB", "Planetscale", "Vercel"],
         descriptions: [
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     },
     {
         title: "Afit gym",
-        image: "/projects/proy-gym-afit.JPG",
+        image: "/portfolio/projects/proy-gym-afit.JPG",
         url: "https://edwardmelendezm.github.io/",
         technologies: ["Html", "Css", "Javascript", "Responsive Design"],
         descriptions: [
@@ -103,6 +103,6 @@ export const experiences: Experience[] = [
         company: "Association of Software Developers of the Unsaac",
         duration: "Dic 2021 - Presente",
         description: "Lideré equipos de desarrolladores fullstack para la creación de aplicaciones web altamente interactivas utilizando tecnologías modernas como React.js, Next.js, Node.js y Go.",
-        badges: ['Next js','Prisma', 'Mongo DB', 'Tailwind','Mysql', '...']
+        badges: ['Next js', 'Prisma', 'Mongo DB', 'Tailwind', 'Mysql', '...']
     }
 ]
