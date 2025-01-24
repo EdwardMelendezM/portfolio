@@ -1,17 +1,39 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { mePhoto } from "@/projects"
 import { motion } from "framer-motion"
-import { Code, Server, Terminal } from "lucide-react"
+import { Code, Server, Terminal, Award, LinkedinIcon, GithubIcon } from "lucide-react"
+import { ModeToggle } from "@/components/button-theme"
+import useLanguage from "@/hooks/use-languages"
+import { Badge } from "@/components/ui/badge"
 
 const AboutMePage: React.FC = () => {
-    const [language, setLanguage] = useState<"ES" | "EN">("ES")
+
+    const setLanguageGlobal = useLanguage((state) => state.setLanguage)
+    const currentLanguage = useLanguage((state) => state.language)
+    const [language, setLanguage] = useState<"ES" | "EN">(currentLanguage)
 
     const toggleLanguage = () => {
-        setLanguage((prev) => (prev === "ES" ? "EN" : "ES"))
+        setLanguage((prev) => (prev === "EN" ? "ES" : "EN"))
+        setLanguageGlobal(language == "EN" ? "ES" : "EN")
+    }
+
+    const openGithub = () => {
+        window.open("https://github.com/EdwardMelendezM", "_blank")
+    }
+
+    const openLinkedin = () => {
+        window.open("https://www.linkedin.com/in/edward-melendez-b23570281/", "_blank")
+    }
+
+    const onScrollToBottom = () => {
+        window.scrollTo({
+            top: document.body.scrollHeight, // Altura total del documento
+            behavior: "smooth", // Scroll suave
+        });
     }
 
     return (
@@ -20,10 +42,11 @@ const AboutMePage: React.FC = () => {
                 <div className="flex justify-end mb-8">
                     <button
                         onClick={toggleLanguage}
-                        className="bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-shadow duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 dark:focus:ring-purple-400"
+                        className="bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-shadow duration-300 outline-none ring-2 ring-purple-500 dark:ring-purple-400"
                     >
                         {language === "ES" ? "EN" : "ES"}
                     </button>
+                    <ModeToggle />
                 </div>
 
                 <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl overflow-hidden">
@@ -47,11 +70,40 @@ const AboutMePage: React.FC = () => {
                             <p className="mt-2 text-xl text-gray-500 dark:text-gray-300 leading-8">
                                 {language === "ES" ? "Ingeniero de Software" : "Software Engineer"}
                             </p>
-                            <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+                            <p className="mt-4 text-md text-gray-600 dark:text-gray-400">
                                 {language === "ES"
-                                    ? "Experto en desarrollo web, móvil y DevOps"
-                                    : "Expert in web development, mobile, and DevOps"}
+                                    ? "Ingeniero de software con más de 4 años de experiencia. He trabajado en proyectos de gran tamaño en el campo del desarrollo web, móvil y de API. También tengo experiencia trabajando en entornos remotos y de oficina. Siempre me esfuerzo por asumir la responsabilidad del proyecto y entregar resultados más rápido de lo esperado."
+                                    : "Software engineer with 4+ years of experience. I have worked on big-sized projects in the field of web, mobile, and API development. I am also experienced in working both remotely and in-office environments. I always strive to take ownership of the project and deliver results faster than expected."}
                             </p>
+                            <div className="pt-5">
+                                <p className="text-lg text-gray-900 dark:text-white">
+                                    {language === "ES"
+                                        ? "Experto en:"
+                                        : "Expert in:"}
+                                </p>
+                                <div className="flex gap-2 mt-2">
+                                    <Badge>
+                                        {language === "ES" ? "Web" : "Web"}
+                                    </Badge>
+                                    <Badge>
+                                        {language === "ES" ? "Móvil" : "Mobile"}
+                                    </Badge>
+                                    <Badge>
+                                        {language === "ES" ? "DAPI" : "API"}
+                                    </Badge>
+                                    <Badge>
+                                        {language === "ES" ? "Cloud" : "Cloud"}
+                                    </Badge>
+                                </div>
+                                <div className="mt-4">
+                                    <a
+                                        className="text-purple-600 dark:text-purple-400 hover:underline cursor-pointer"
+                                        onClick={onScrollToBottom}
+                                    >
+                                        {language === "ES" ? "¡Contáctame! ✨" : "Contact Me! ✨"}
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -72,6 +124,77 @@ const AboutMePage: React.FC = () => {
                         color="orange"
                     />
                     <SkillCard href="/skills" icon={Server} title="SKILLS" value="10+" color="blue" />
+                </div>
+
+                {/* Reconocimientos || Awards */}
+                <div className="mt-16">
+                    <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white">
+                        {language === "ES" ? "Reconocimientos" : "Awards"}
+                    </h2>
+                    <div className="mt-6 grid gap-6 lg:grid-cols-2">
+                        <AwardCard
+                            title={language === "ES" ? "1er Lugar En El Concurso de Buenas Prácticas de Calidad" : "1st Place in Quality Best Practices Contest"}
+                            organization="UNSAAC"
+                            year="2023"
+                            description={
+                                language === "ES"
+                                    ? "Resentamos Scheduler Pro, una solución optimizada con Inteligencia Artificial para generar horarios académicos más eficientes. ¡Orgullosos de este reconocimiento!."
+                                    : "We represented Scheduler Pro, an optimized solution with Artificial Intelligence to generate more efficient academic schedules. Proud of this recognition!."
+                            }
+                        />
+                        <AwardCard
+                            title={language === "ES" ? "2do Lugar en la Cusco Hackathon Innovators" : "2nd Place in the Cusco Hackathon Innovators 2024"}
+                            organization="CUSCO INNOVATORS"
+                            year="2024"
+                            description={
+                                language === "ES"
+                                    ? "Premiado a mi y equipo por implementar AutoMenu, una solución innovadora que permite a los clientes generar recetas con una foto de su nevera con inteligencia artificial de Gemini."
+                                    : "Awarded to me and team for implementing AutoMenu, an innovative solution that allows customers to generate recipes with a photo of their fridge with Gemini Artificial Intelligence."
+                            }
+                        />
+                    </div>
+                </div>
+
+                {/* Contactanos */}
+                <div className="mt-16">
+                    <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white">
+                        {language === "ES" ? "Contactame" : "Contact me"}
+                    </h2>
+                    <div className="mt-6 grid gap-6 lg:grid-cols-2">
+                        <motion.div
+                            whileHover={{ scale: 1.02 }}
+                            onClick={openGithub}
+                            className="bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg p-6 hover:border hover:dark:border-white cursor-pointer hover:border-black">
+                            <div className="flex items-center space-x-4">
+                                <div className="flex-shrink-0">
+                                    <GithubIcon className="h-8 w-8 text-gray-800 dark:text-gray-200" />
+                                </div>
+                                <div>
+                                    <h3 className="text-lg font-medium text-gray-900 dark:text-white">
+                                        {language === "ES" ? "Proyectos en GitHub" : "GitHub Projects"}
+                                    </h3>
+                                    <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">177+</p>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            whileHover={{ scale: 1.02 }}
+                            onClick={openLinkedin}
+                            className="bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg p-6 hover:border hover:dark:border-white cursor-pointer hover:border-black">
+                            <div className="flex items-center space-x-4">
+                                <div className="flex-shrink-0">
+                                    <LinkedinIcon className="h-8 w-8 text-gray-800 dark:text-gray-200" />
+                                </div>
+                                <div>
+                                    <h3 className="text-lg font-medium text-gray-900 dark:text-white">
+                                        {language === "ES" ? "Conexiones en LinkedIn" : "LinkedIn Network"}
+                                    </h3>
+                                    <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">1199+</p>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -98,7 +221,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ href, icon: Icon, title, value, c
             <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`flex flex-col overflow-hidden rounded-lg shadow-lg bg-gradient-to-r ${colorClasses[color]}`}
+                className={`flex flex-col overflow-hidden rounded-lg shadow-lg bg-gradient-to-r animate-pulse ${colorClasses[color]}`}
             >
                 <div className="flex-1 p-6 flex flex-col justify-between">
                     <div className="flex-1">
@@ -111,6 +234,34 @@ const SkillCard: React.FC<SkillCardProps> = ({ href, icon: Icon, title, value, c
                 </div>
             </motion.div>
         </Link>
+    )
+}
+
+interface AwardCardProps {
+    title: string
+    organization: string
+    year: string
+    description: string
+}
+
+const AwardCard: React.FC<AwardCardProps> = ({ title, organization, year, description }) => {
+    return (
+        <motion.div whileHover={{ scale: 1.02 }} className="bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg">
+            <div className="px-4 py-5 sm:p-6">
+                <div className="flex items-center">
+                    <Award className="h-8 w-8 text-yellow-400" />
+                    <h3 className="ml-3 text-lg font-medium text-gray-900 dark:text-white">{title}</h3>
+                </div>
+                <div className="mt-2 max-w-xl text-sm text-gray-500 dark:text-gray-400">
+                    <p>
+                        {organization} - {year}
+                    </p>
+                </div>
+                <div className="mt-3 text-sm text-gray-600 dark:text-gray-300">
+                    <p>{description}</p>
+                </div>
+            </div>
+        </motion.div>
     )
 }
 

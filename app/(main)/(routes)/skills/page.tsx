@@ -2,10 +2,7 @@ import Skills from "@/components/skills";
 
 const SkillsPage = () => {
     return (
-        <>
-            <Skills/>
-        </>
-
+        <Skills />
     );
 }
 
