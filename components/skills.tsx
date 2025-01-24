@@ -59,9 +59,8 @@ const Skills: React.FC = () => {
             <div className="grid grid-cols-1 gap-10 w-[90%] max-w-6xl">
                 {Object.entries(skills).map(([category, skillList], index) => (
 
-                    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+                    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} key={index}>
                         <div
-                            key={index}
                             className="flex flex-col items-center p-8 rounded-lg shadow-xl dark:bg-gradient-to-tl dark:from-gray-800 dark:to-gray-900 transform hover:scale-105 transition-transform duration-300"
                         >
                             <h2 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-yellow-500 mb-6 capitalize">
