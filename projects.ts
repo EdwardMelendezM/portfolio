@@ -1,4 +1,4 @@
-export const mePhoto = "/porftolio/projects/me.png";
+export const mePhoto = "/portfolio/projects/me.png";
 
 export interface Project {
     title: {
@@ -21,7 +21,7 @@ export const projects: Project[] = [
             ES: "Proyecto Odin",
             EN: "Odin Project",
         },
-        image: "/porftolio/projects/proy-odin.PNG",
+        image: "/portfolio/projects/proy-odin.PNG",
         isTop: true,
         url: "https://odin.onscp.com/auth/login",
         technologies: ["Angular 17", "Go", "Microservicios", "Clean Architecture", "Docker", "Kubernetes", "Gitlab CI/CD", "AWS", "Multi tenants"],
@@ -49,7 +49,7 @@ export const projects: Project[] = [
             ES: "SinCodigoIA",
             EN: "SinCodigoIA",
         },
-        image: "/porftolio/projects/sincodigoIa.png",
+        image: "/portfolio/projects/sincodigoIa.png",
         isTop: true,
         url: "https://www.sincodigo.site/",
         technologies: ["Next JS", "Google Cloud", "React Native", "Tailwind CSS", "Docker Compose", "Prisma DB", "Postgres", "Vercel",],
@@ -74,7 +74,7 @@ export const projects: Project[] = [
             ES: "CreativaLab LMS",
             EN: "CreativaLab LMS",
         },
-        image: "/porftolio/projects/creativaLab.png",
+        image: "/portfolio/projects/creativaLab.png",
         isTop: true,
         url: "https://academy.creativalab.tech/auth/login",
         technologies: ["Next JS", "Vercel", "Tailwind CSS", "React JS", "Prisma DB", "Postgres"],
@@ -99,7 +99,7 @@ export const projects: Project[] = [
             ES: "Clone de Airbnb",
             EN: "Airbnb Clone",
         },
-        image: "/porftolio/projects/proy-airbnb.PNG",
+        image: "/portfolio/projects/proy-airbnb.PNG",
         url: "https://clone-airbnb-proyect-3x0alluux-edwardmelendezm.vercel.app/",
         technologies: ["Next JS", "Tailwind CSS", "React JS", "Prisma DB", "Planetscale", "Vercel"],
         descriptions: [
@@ -123,7 +123,7 @@ export const projects: Project[] = [
             ES: "Casa Miau",
             EN: "Casa Miau",
         },
-        image: "/porftolio/projects/proy-casa-miau.JPG",
+        image: "/portfolio/projects/proy-casa-miau.JPG",
         url: "https://github.com/EdwardMelendezM/CasaMiau",
         technologies: ["Php", "MVC", "Mysql", "Bootstrap", "Javascript"],
         descriptions: [
@@ -143,7 +143,7 @@ export const projects: Project[] = [
             ES: "Sistema de Gestion de Silabos",
             EN: "Syllabus Management System",
         },
-        image: "/porftolio/projects/proy-centro-computo.JPG",
+        image: "/portfolio/projects/proy-centro-computo.JPG",
         url: "https://github.com/EdwardMelendezM/SISTEMA-DE-GESTION-DE-SILABOS-Y-CONTROL-DE-ASISTENCIA-PARA-EL-DEPARTAMENTO-ACADEMICO-DE-ING.-INFORMA",
         technologies: ["Php", "MVC", "Mysql", "Bootstrap", "Javascript", "Reportes PDF"],
         descriptions: [
@@ -171,7 +171,7 @@ export const projects: Project[] = [
             ES: "CMS Ecommerce",
             EN: "CMS Ecommerce",
         },
-        image: "/porftolio/projects/proy-ecommerce.jpg",
+        image: "/portfolio/projects/proy-ecommerce.jpg",
         url: "https://ecommerce-admin-pi-eight.vercel.app/sign-in?redirect_url=https%3A%2F%2Fecommerce-admin-pi-eight.vercel.app%2F",
         technologies: ["CMS", "Next JS", "Tailwind", "React JS", "Prisma DB", "Planetscale", "Vercel"],
         descriptions: [
@@ -199,7 +199,7 @@ export const projects: Project[] = [
             ES: "Afit gym",
             EN: "Afit gym",
         },
-        image: "/porftolio/projects/proy-gym-afit.JPG",
+        image: "/portfolio/projects/proy-gym-afit.JPG",
         url: "https://edwardmelendezm.github.io/",
         technologies: ["Html", "Css", "Javascript", "Responsive Design"],
         descriptions: [
@@ -219,7 +219,7 @@ export const projects: Project[] = [
             ES: "CLone de  Messenger",
             EN: "Messenger Clone",
         },
-        image: "/porftolio/projects/proy-messenger.jpg",
+        image: "/portfolio/projects/proy-messenger.jpg",
         url: "https://messenger-clone-next-js-13-fdf5nsnqb-edwardmelendezm.vercel.app/",
         technologies: ["Pusher", "Next JS", "Tailwind CSS", "React JS", "Vercel", "MongoDB"],
         descriptions: [
