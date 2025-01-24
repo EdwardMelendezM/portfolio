@@ -56,7 +56,12 @@ const Projects: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {mappedProjects.map((project, index) => (
-                        <ProjectCard key={index} project={project} openModal={openModal} />
+                        <ProjectCard
+                            key={index}
+                            project={project}
+                            openModal={openModal}
+                            currentLanguage={currentLanguage}
+                        />
                     ))}
                 </div>
             </div>
@@ -67,9 +72,10 @@ const Projects: React.FC = () => {
 interface ProjectCardProps {
     project: Project
     openModal: (project: Project) => void
+    currentLanguage: string
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project, openModal }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project, openModal, currentLanguage }) => {
     return (
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <Card className="overflow-hidden cursor-pointer group" onClick={() => openModal(project)}>
@@ -83,13 +89,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, openModal }) => {
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-transform duration-300 transform flex items-center justify-center group-hover:scale-110 ">
                         <p className="text-white font-semibold text-lg">
-                            {useLanguage((state) => state.language) === "ES" ? "Ver más" : "See more"}
+                            {currentLanguage === "ES" ? "Ver más" : "See more"}
                         </p>
                     </div>
                     {project.isTop && (
                         <div className="absolute top-2 right-2 bg-yellow-600 rounded-xl text-gray-100">
                             <p className="text-xs font-semibold px-2 py-1">
-                                {useLanguage((state) => state.language) === "ES" ? "Destacado" : "Top"}
+                                {currentLanguage === "ES" ? "Destacado" : "Top"}
                             </p>
                         </div>
                     )}
