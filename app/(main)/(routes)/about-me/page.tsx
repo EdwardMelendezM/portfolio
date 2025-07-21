@@ -72,7 +72,7 @@ const AboutMePage: React.FC = () => {
                                     Edward Melendez
                                 </h1>
                                 <p className="mt-2 text-xl text-gray-500 dark:text-gray-300 leading-8">
-                                    {language === "ES" ? "Ingeniero de Software" : "Software Engineer"}
+                                    {language === "ES" ? "Bachiller en Ingeneria de sistemas e informatica" : "Bachelor in Systems and Computer Engineering"}
                                 </p>
                                 <p className="mt-4 text-md text-gray-600 dark:text-gray-400">
                                     {language === "ES"
