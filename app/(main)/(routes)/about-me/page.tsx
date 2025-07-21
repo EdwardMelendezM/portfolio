@@ -164,9 +164,9 @@ const AboutMePage: React.FC = () => {
                             />
                             <AwardCard
                               title={language === "ES"
-                                ? "Ganadores en Cusco Hackathon e impulsores de innovación regional"
-                                : "Winners at Cusco Hackathon and Regional Innovation Drivers"}
-                              organization="Creativa Lab & CUSCO INNOVATORS"
+                                ? "Ganadores en StartUp Perú 11G"
+                                : "Winners at StartUp Perú 11G"}
+                              organization="Creativa Lab & StartUp Perú"
                               year="2024"
                               description={
                                   language === "ES"

@@ -51,7 +51,7 @@ export const projects: Project[] = [
         },
         image: "/projects/sincodigoIa.png",
         isTop: true,
-        url: "https://www.sincodigo.site/",
+        url: "https://www.sincodigoia.site/",
         technologies: ["Next JS", "Google Cloud", "React Native", "Tailwind CSS", "Docker Compose", "Prisma DB", "Postgres", "Vercel",],
         descriptions: [
             {
