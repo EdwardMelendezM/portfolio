@@ -25,6 +25,11 @@ const nextConfig = {
                 hostname: "lh3.googleusercontent.com",
                 pathname: '**',
             },
+            {
+                protocol: "https",
+                hostname: "assets.vercel.com",
+                pathname: '**',
+            },
         ],
         formats: ["image/avif", "image/webp"],
     },
