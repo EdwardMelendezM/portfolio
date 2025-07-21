@@ -92,7 +92,7 @@ const EnhancedExperienceCard: React.FC<EnhancedExperienceCardProps> = ({
     return (
       <motion.div
         className="relative flex items-start group"
-        variants={itemVariants}
+        // variants={itemVariants}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -108,7 +108,7 @@ const EnhancedExperienceCard: React.FC<EnhancedExperienceCardProps> = ({
               {!isLast && (
                 <motion.div
                   className="w-0.5 bg-gradient-to-b from-gray-300 to-gray-200 dark:from-gray-600 dark:to-gray-700 mt-2"
-                  variants={timelineVariants}
+                  // variants={timelineVariants}
                   style={{ height: "calc(100% + 3rem)" }}
                 />
               )}
