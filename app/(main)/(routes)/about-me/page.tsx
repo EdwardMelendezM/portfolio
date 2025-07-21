@@ -162,6 +162,18 @@ const AboutMePage: React.FC = () => {
                                         : "Awarded to me and team for implementing AutoMenu, an innovative solution that allows customers to generate recipes with a photo of their fridge with Gemini Artificial Intelligence."
                                 }
                             />
+                            <AwardCard
+                              title={language === "ES"
+                                ? "Ganadores en Cusco Hackathon e impulsores de innovación regional"
+                                : "Winners at Cusco Hackathon and Regional Innovation Drivers"}
+                              organization="Creativa Lab & CUSCO INNOVATORS"
+                              year="2024"
+                              description={
+                                  language === "ES"
+                                    ? "Ser parte del equipo ganador en la Cusco Hackathon Innovators 2024 con AutoMenu fue increíble. Nuestra solución usó IA de Gemini para generar recetas a partir de una foto de una refrigeradora. Este logro, junto con ser seleccionados por StartUp Perú 11G, valida nuestra visión de transformar realidades desde regiones como Cusco."
+                                    : "Being part of the winning team at Cusco Hackathon Innovators 2024 with AutoMenu was an amazing experience. Our solution used Gemini AI to generate recipes from a photo of a fridge. This achievement, along with being selected as a winner of StartUp Perú 11G, validates our vision of transforming realities from regions like Cusco."
+                              }
+                            />
                         </div>
                     </div>
                 </motion.div>
