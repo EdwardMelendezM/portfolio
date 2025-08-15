@@ -167,11 +167,11 @@ const AboutMePage: React.FC = () => {
                                 ? "Ganadores en StartUp Perú 11G"
                                 : "Winners at StartUp Perú 11G"}
                               organization="Creativa Lab & StartUp Perú"
-                              year="2024"
+                              year="2025"
                               description={
-                                  language === "ES"
-                                    ? "Ser parte del equipo ganador en la Cusco Hackathon Innovators 2024 con AutoMenu fue increíble. Nuestra solución usó IA de Gemini para generar recetas a partir de una foto de una refrigeradora. Este logro, junto con ser seleccionados por StartUp Perú 11G, valida nuestra visión de transformar realidades desde regiones como Cusco."
-                                    : "Being part of the winning team at Cusco Hackathon Innovators 2024 with AutoMenu was an amazing experience. Our solution used Gemini AI to generate recipes from a photo of a fridge. This achievement, along with being selected as a winner of StartUp Perú 11G, validates our vision of transforming realities from regions like Cusco."
+                                language === "ES"
+                                  ? "Creativa Lab fue ganador de StartUp Perú 11G – 2025 🏆🚀, reconocimiento a nuestra labor impulsando la innovación digital desde Cusco. Diseñamos este proyecto para acelerar el talento creativo y empoderar a nuevos creadores digitales en América Latina. Ahora vamos por el siguiente nivel."
+                                  : "Creativa Lab won StartUp Perú 11G – 2025 🏆🚀, a recognition of our work driving digital innovation from Cusco. We designed this project to boost creative talent and empower new digital creators in Latin America. Now, we aim for the next level."
                               }
                             />
                         </div>
