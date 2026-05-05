@@ -443,7 +443,8 @@ const EnhancedProjects: React.FC = () => {
               >
                   <Card className="text-center p-6 bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border-0 shadow-lg">
                       <div className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-600 text-transparent bg-clip-text mb-2">
-                          {projects.length}+
+                          {/*{projects.length}+*/}
+                          20+
                       </div>
                       <div className="text-gray-600 dark:text-gray-300 font-medium">
                           {currentLanguage === "ES" ? "Proyectos" : "Projects"}
@@ -461,7 +462,7 @@ const EnhancedProjects: React.FC = () => {
                   
                   <Card className="text-center p-6 bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border-0 shadow-lg">
                       <div className="text-3xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 text-transparent bg-clip-text mb-2">
-                          15+
+                          20+
                       </div>
                       <div className="text-gray-600 dark:text-gray-300 font-medium">
                           {currentLanguage === "ES" ? "Tecnologías" : "Technologies"}
@@ -470,7 +471,7 @@ const EnhancedProjects: React.FC = () => {
                   
                   <Card className="text-center p-6 bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border-0 shadow-lg">
                       <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 text-transparent bg-clip-text mb-2">
-                          4+
+                          5+
                       </div>
                       <div className="text-gray-600 dark:text-gray-300 font-medium">
                           {currentLanguage === "ES" ? "Años" : "Years"}

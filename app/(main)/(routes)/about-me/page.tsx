@@ -1,14 +1,14 @@
 "use client"
 
-import { useState } from "react"
+import {useState} from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { mePhoto } from "@/projects"
-import { motion } from "framer-motion"
-import { Code, Server, Terminal, Award, LinkedinIcon, GithubIcon } from "lucide-react"
-import { ModeToggle } from "@/components/button-theme"
+import {mePhoto} from "@/projects"
+import {motion} from "framer-motion"
+import {Code, Server, Terminal, Award, LinkedinIcon, GithubIcon} from "lucide-react"
+import {ModeToggle} from "@/components/button-theme"
 import useLanguage from "@/hooks/use-languages"
-import { Badge } from "@/components/ui/badge"
+import {Badge} from "@/components/ui/badge"
 
 const AboutMePage: React.FC = () => {
 
@@ -37,7 +37,8 @@ const AboutMePage: React.FC = () => {
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 py-12 px-4 sm:px-6 lg:px-8">
+        <div
+            className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <div className="flex justify-end mb-8">
                     <button
@@ -46,12 +47,12 @@ const AboutMePage: React.FC = () => {
                     >
                         {language === "ES" ? "EN" : "ES"}
                     </button>
-                    <ModeToggle />
+                    <ModeToggle/>
                 </div>
                 <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
+                    initial={{opacity: 0, y: -20}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{duration: 0.5}}
                 >
                     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl overflow-hidden">
                         <div className="md:flex">
@@ -113,30 +114,36 @@ const AboutMePage: React.FC = () => {
                     </div>
                 </motion.div>
                 <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
+                    initial={{opacity: 0, y: -20}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{duration: 0.5}}
                 >
                     <div className="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
                         <SkillCard
                             href="/professional-experience"
                             icon={Code}
                             title={language === "ES" ? "EXPERIENCIA" : "EXPERIENCE"}
-                            value="4+"
+                            value="5+"
                             color="purple"
                         />
                         <SkillCard
                             href="/projects"
                             icon={Terminal}
                             title={language === "ES" ? "PROYECTOS" : "PROJECTS"}
-                            value="20+"
+                            value="30+"
                             color="orange"
                         />
-                        <SkillCard href="/skills" icon={Server} title="SKILLS" value="10+" color="blue" />
+                        <SkillCard
+                            href="/skills"
+                            icon={Server}
+                            title="SKILLS"
+                            value="20+"
+                            color="blue"
+                        />
                     </div>
                 </motion.div>
 
-                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+                <motion.div initial={{opacity: 0, y: 20}} animate={{opacity: 1, y: 0}} transition={{duration: 0.5}}>
                     <div className="mt-16">
                         <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white">
                             {language === "ES" ? "Reconocimientos" : "Awards"}
@@ -163,16 +170,16 @@ const AboutMePage: React.FC = () => {
                                 }
                             />
                             <AwardCard
-                              title={language === "ES"
-                                ? "Ganadores en StartUp Perú 11G"
-                                : "Winners at StartUp Perú 11G"}
-                              organization="Creativa Lab & StartUp Perú"
-                              year="2025"
-                              description={
-                                language === "ES"
-                                  ? "Creativa Lab fue ganador de StartUp Perú 11G – 2025 🏆🚀, reconocimiento a nuestra labor impulsando la innovación digital desde Cusco. Diseñamos este proyecto para acelerar el talento creativo y empoderar a nuevos creadores digitales en América Latina. Ahora vamos por el siguiente nivel."
-                                  : "Creativa Lab won StartUp Perú 11G – 2025 🏆🚀, a recognition of our work driving digital innovation from Cusco. We designed this project to boost creative talent and empower new digital creators in Latin America. Now, we aim for the next level."
-                              }
+                                title={language === "ES"
+                                    ? "Ganadores en StartUp Perú 11G"
+                                    : "Winners at StartUp Perú 11G"}
+                                organization="Creativa Lab & StartUp Perú"
+                                year="2025"
+                                description={
+                                    language === "ES"
+                                        ? "Creativa Lab fue ganador de StartUp Perú 11G – 2025 🏆🚀, reconocimiento a nuestra labor impulsando la innovación digital desde Cusco. Diseñamos este proyecto para acelerar el talento creativo y empoderar a nuevos creadores digitales en América Latina. Ahora vamos por el siguiente nivel."
+                                        : "Creativa Lab won StartUp Perú 11G – 2025 🏆🚀, a recognition of our work driving digital innovation from Cusco. We designed this project to boost creative talent and empower new digital creators in Latin America. Now, we aim for the next level."
+                                }
                             />
                         </div>
                     </div>
@@ -185,35 +192,35 @@ const AboutMePage: React.FC = () => {
                     </h2>
                     <div className="mt-6 grid gap-6 lg:grid-cols-2">
                         <motion.div
-                            whileHover={{ scale: 1.02 }}
+                            whileHover={{scale: 1.02}}
                             onClick={openGithub}
                             className="bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg p-6 hover:border hover:dark:border-white cursor-pointer hover:border-black">
                             <div className="flex items-center space-x-4">
                                 <div className="flex-shrink-0">
-                                    <GithubIcon className="h-8 w-8 text-gray-800 dark:text-gray-200" />
+                                    <GithubIcon className="h-8 w-8 text-gray-800 dark:text-gray-200"/>
                                 </div>
                                 <div>
                                     <h3 className="text-lg font-medium text-gray-900 dark:text-white">
                                         {language === "ES" ? "Proyectos en GitHub" : "GitHub Projects"}
                                     </h3>
-                                    <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">177+</p>
+                                    <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">217+</p>
                                 </div>
                             </div>
                         </motion.div>
 
                         <motion.div
-                            whileHover={{ scale: 1.02 }}
+                            whileHover={{scale: 1.02}}
                             onClick={openLinkedin}
                             className="bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg p-6 hover:border hover:dark:border-white cursor-pointer hover:border-black">
                             <div className="flex items-center space-x-4">
                                 <div className="flex-shrink-0">
-                                    <LinkedinIcon className="h-8 w-8 text-gray-800 dark:text-gray-200" />
+                                    <LinkedinIcon className="h-8 w-8 text-gray-800 dark:text-gray-200"/>
                                 </div>
                                 <div>
                                     <h3 className="text-lg font-medium text-gray-900 dark:text-white">
                                         {language === "ES" ? "Conexiones en LinkedIn" : "LinkedIn Network"}
                                     </h3>
-                                    <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">1199+</p>
+                                    <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">3586+</p>
                                 </div>
                             </div>
                         </motion.div>
@@ -232,7 +239,7 @@ interface SkillCardProps {
     color: "purple" | "orange" | "blue"
 }
 
-const SkillCard: React.FC<SkillCardProps> = ({ href, icon: Icon, title, value, color }) => {
+const SkillCard: React.FC<SkillCardProps> = ({href, icon: Icon, title, value, color}) => {
     const colorClasses = {
         purple: "from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700",
         orange: "from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700",
@@ -242,15 +249,15 @@ const SkillCard: React.FC<SkillCardProps> = ({ href, icon: Icon, title, value, c
     return (
         <Link href={href}>
             <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{scale: 1.05}}
+                whileTap={{scale: 0.95}}
                 className={`flex flex-col overflow-hidden rounded-lg shadow-lg bg-gradient-to-r animate-pulse ${colorClasses[color]}`}
             >
                 <div className="flex-1 p-6 flex flex-col justify-between">
                     <div className="flex-1">
                         <div className="flex items-center justify-between">
                             <p className="text-xl font-semibold text-white">{title}</p>
-                            <Icon className="h-6 w-6 text-white" />
+                            <Icon className="h-6 w-6 text-white"/>
                         </div>
                         <p className="mt-3 text-4xl font-bold text-white">{value}</p>
                     </div>
@@ -267,12 +274,12 @@ interface AwardCardProps {
     description: string
 }
 
-const AwardCard: React.FC<AwardCardProps> = ({ title, organization, year, description }) => {
+const AwardCard: React.FC<AwardCardProps> = ({title, organization, year, description}) => {
     return (
-        <motion.div whileHover={{ scale: 1.02 }} className="bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg">
+        <motion.div whileHover={{scale: 1.02}} className="bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg">
             <div className="px-4 py-5 sm:p-6">
                 <div className="flex items-center">
-                    <Award className="h-8 w-8 text-yellow-400" />
+                    <Award className="h-8 w-8 text-yellow-400"/>
                     <h3 className="ml-3 text-lg font-medium text-gray-900 dark:text-white">{title}</h3>
                 </div>
                 <div className="mt-2 max-w-xl text-sm text-gray-500 dark:text-gray-400">

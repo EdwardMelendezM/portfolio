@@ -1,4 +1,4 @@
-export const mePhoto = "/projects/me.png";
+export const mePhoto = "/projects/me2.jpg";
 
 export interface Project {
     title: {

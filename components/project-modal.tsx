@@ -252,16 +252,18 @@ const EnhancedProjectModal: React.FC = () => {
                                         <X className="w-4 h-4 mr-2" />
                                         {currentLanguage === "ES" ? "Cerrar" : "Close"}
                                     </Button>
-                                    
-                                    <Button
-                                      asChild
-                                      className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white border-0"
-                                    >
-                                        <Link href={project.url} target="_blank" rel="noopener noreferrer">
-                                            <EyeIcon className="w-4 h-4 mr-2" />
-                                            {currentLanguage === "ES" ? "Ver en Vivo" : "View Live"}
-                                        </Link>
-                                    </Button>
+
+                                    { project.url && (
+                                        <Button
+                                            asChild
+                                            className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white border-0"
+                                        >
+                                            <Link href={project.url} target="_blank" rel="noopener noreferrer">
+                                                <EyeIcon className="w-4 h-4 mr-2" />
+                                                {currentLanguage === "ES" ? "Ver en Vivo" : "View Live"}
+                                            </Link>
+                                        </Button>
+                                    )}
                                 </div>
                             </div>
                         </div>
