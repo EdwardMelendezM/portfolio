@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 👨‍💻 Edward Melendez — Software Engineer
 
-## Getting Started
+Welcome to my portfolio! I’m Edward Melendez, a passionate and results-driven **Software Engineer** with a **Bachelor's degree in Systems and Computer Engineering** and over **4 years of experience** in building web, mobile, and API solutions.
 
-First, run the development server:
+## 🚀 About Me
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+I specialize in designing and implementing scalable applications across multiple platforms. I have experience working both remotely and on-site, always aiming to take ownership of projects and exceed expectations.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💼 Experience
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 🧠 4+ years of professional experience
+- 🌐 20+ completed projects
+- 💡 10+ core technical skills
+- 🏆 Multiple national-level recognitions
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🧠 Skills
 
-## Learn More
+- Web Development
+- Mobile App Development
+- RESTful APIs & Microservices
+- Cloud Computing (GCP, AWS)
 
-To learn more about Next.js, take a look at the following resources:
+## 🏅 Awards & Recognition
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 🥇 **1st Place** – *Quality Best Practices Contest*, UNSAAC 2023  
+  *Recognized for Scheduler Pro, an AI-powered academic scheduling solution.*
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- 🥈 **2nd Place** – *Cusco Hackathon Innovators 2024*  
+  *Built AutoMenu using Gemini AI to generate recipes from fridge photos.*
 
-## Deploy on Vercel
+- 🏆 **Winner** – *StartUp Perú 11G*  
+  *Awarded for the innovation and impact of AutoMenu in Cusco's tech ecosystem.*
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📫 Contact
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- 🌐 [Portfolio Website](https://melemele.site/about-me)
+- 💼 [LinkedIn](https://www.linkedin.com/in/edwardmelendezm)
+- 🐙 [GitHub](https://github.com/EdwardMelendezM)
+
+---
+
+Thanks for visiting! Feel free to connect with me or check out my [projects](https://github.com/EdwardMelendezM?tab=repositories).

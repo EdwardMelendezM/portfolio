@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    basePath: "/",
+    output: "export",
+    reactStrictMode: true,
     images: {
         remotePatterns: [
             {
@@ -15,6 +18,16 @@ const nextConfig = {
             {
                 protocol: "https",
                 hostname: "avatars.githubusercontent.com",
+                pathname: '**',
+            },
+            {
+                protocol: "https",
+                hostname: "lh3.googleusercontent.com",
+                pathname: '**',
+            },
+            {
+                protocol: "https",
+                hostname: "assets.vercel.com",
                 pathname: '**',
             },
         ],
